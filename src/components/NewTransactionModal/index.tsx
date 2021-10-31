@@ -8,7 +8,7 @@ import closeImg from "../../assets/vector.svg"
 import incomeImg from "../../assets/entradas.svg";
 import outcomeImg from "../../assets/saidas.svg";
 import { api } from "../../services/api";
-import { TransactionsContext } from "../../TransactionsContext";
+import { useTransactions } from "../../hooks/useTransactions";
 
 
 interface NewTransactionModalPrpos {
@@ -18,7 +18,7 @@ interface NewTransactionModalPrpos {
 
 export function NewTransactionModal({isOpen, onRequestClose} : NewTransactionModalPrpos) {
 
-    const { createTransaction } = useContext(TransactionsContext)
+    const { createTransaction } = useTransactions();
 
     const [title, setTitle] = useState('');
     const [amount, setAmount ] = useState(0);
