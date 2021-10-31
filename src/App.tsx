@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
 import { GlobalStyle } from './global';
 
@@ -8,8 +9,8 @@ export function App() {
   return (
     <>
       <Header />
-        <h1> Hello world</h1>
-        <GlobalStyle />
+      <Dashboard />
+      <GlobalStyle />
     </>
   );
 }
